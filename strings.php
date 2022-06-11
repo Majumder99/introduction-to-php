@@ -20,6 +20,11 @@ echo "<br>";
 echo "My tolower is " . strtolower($name2);
 echo "<br>";
 
+echo strrev("Hello world");
+echo "<br>";
+echo strpos("Hello world", "world");
+echo "<br>";
+
 ?>
 
 
