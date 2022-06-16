@@ -10,7 +10,16 @@ function addNumber(int $x, int $y) {
 }
 
 // echo addNumber(5, "5");//it will return error in strict mode
-echo addNumber(5, 5);
+// echo addNumber(5, 5);
+
+
+//Default function
+function sayHello($name = "Josua", $time = "Morning") {
+    echo "Good morning $name and the time is $time <br>";
+}
+
+sayHello('sourav', 'evening');
+sayHello();
 
 ?>
 
