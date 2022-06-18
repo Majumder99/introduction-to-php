@@ -57,11 +57,12 @@ if (isset($_POST['submit'])) {
             $errors['ingredients']  = 'Ingredients must be comma separated <br>';
         }
     }
-}
-if (array_filter($errors)) {
-    echo 'There is error';
-} else {
-    header('Location : project/index.php');
+
+    if (array_filter($errors)) {
+        echo 'There is error';
+    } else {
+        header('Location:http://localhost/phpwithnetninja/project/');
+    }
 }
 //End of check form
 
