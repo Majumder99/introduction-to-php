@@ -17,6 +17,8 @@ session_start();
     echo $_SESSION['favanimal'];
     echo '<br>';
     echo $_SESSION['favcolor'];
+    echo "<br>";
+    echo print_r($_SESSION)
     ?>
 </body>
 
