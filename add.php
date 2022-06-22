@@ -64,12 +64,11 @@ if (isset($_POST['submit'])) {
         echo 'There is error';
     } else {
 
-        $email = mysqli_real_escape_string($conn, $_POST['email']);
-        $title = mysqli_real_escape_string($conn, $_POST['title']);
-        $ingredients = mysqli_real_escape_string($conn, $_POST['$ingredients']);
+        $email1 = mysqli_real_escape_string($conn, $_POST['email']);
+        $title1 = mysqli_real_escape_string($conn, $_POST['title']);
+        $ingredients1 = mysqli_real_escape_string($conn, $_POST['ingredients']);
 
-        $sql = "INSERT INTO pizzas(title, email, ingredients) VALUES('$title', '$email', '$ingredients')";
-
+        $sql = "INSERT INTO pizzas(title, email, ingredients) VALUES('$title1', '$email1', '$ingredients1')";
         if (mysqli_query($conn, $sql)) {
             header('Location:http://localhost/phpwithnetninja/project/');
         } else {
