@@ -2,6 +2,7 @@
     <title>Pizza Hut</title>
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
     <style>
         .brand {
             background-color: #cbb09c !important;
@@ -29,7 +30,7 @@
         <div class="container">
             <a href="#" class="brand-logo brand-text">Ninja Pizza</a>
             <ul class="right hide-on-small-and-down" id="nax-mobile">
-                <li><a href="#" class="btn brand z-depth-0">Add A PIZZA</a></li>
+                <li><a href="../add.php" class="btn brand z-depth-0">Add A PIZZA</a></li>
             </ul>
         </div>
     </nav>

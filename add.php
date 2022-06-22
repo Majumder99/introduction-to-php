@@ -1,4 +1,6 @@
 <?php
+
+include 'project/config/connection.php';
 /// Form validation
 
 // if (isset($_GET['submit'])) {
@@ -61,7 +63,18 @@ if (isset($_POST['submit'])) {
     if (array_filter($errors)) {
         echo 'There is error';
     } else {
-        header('Location:http://localhost/phpwithnetninja/project/');
+
+        $email = mysqli_real_escape_string($conn, $_POST['email']);
+        $title = mysqli_real_escape_string($conn, $_POST['title']);
+        $ingredients = mysqli_real_escape_string($conn, $_POST['$ingredients']);
+
+        $sql = "INSERT INTO pizzas(title, email, ingredients) VALUES('$title', '$email', '$ingredients')";
+
+        if (mysqli_query($conn, $sql)) {
+            header('Location:http://localhost/phpwithnetninja/project/');
+        } else {
+            echo "error sending data " . mysqli_error($conn);
+        }
     }
 }
 //End of check form
