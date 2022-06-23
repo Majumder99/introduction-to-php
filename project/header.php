@@ -1,3 +1,15 @@
+<?php
+
+session_start();
+$name = $_SESSION['name'];
+
+// if ($_SERVER['QUERY_STRING'] == 'noname') {
+//     unset($_SESSION['name']);
+// }
+
+?>
+
+
 <head>
     <title>Pizza Hut</title>
     <!-- Compiled and minified CSS -->
@@ -22,6 +34,14 @@
             color: red;
             font-size: 12px;
         }
+
+        .pizza {
+            width: 100px;
+            margin: 40px auto -30px;
+            display: block;
+            position: relative;
+            top: -30px;
+        }
     </style>
 </head>
 
@@ -30,6 +50,7 @@
         <div class="container">
             <a href="#" class="brand-logo brand-text">Ninja Pizza</a>
             <ul class="right hide-on-small-and-down" id="nax-mobile">
+                <li class="grey-text"><?php echo $name; ?></li>
                 <li><a href="../add.php" class="btn brand z-depth-0">Add A PIZZA</a></li>
             </ul>
         </div>
