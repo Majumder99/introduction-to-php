@@ -1,12 +1,14 @@
 <?php
 
 session_start();
-$name = $_SESSION['name'];
 
-// if ($_SERVER['QUERY_STRING'] == 'noname') {
-//     unset($_SESSION['name']);
-// }
+if ($_SERVER['QUERY_STRING'] == 'noname') {
+    unset($_SESSION['name']);
+    // session_unset();
+}
 
+$name = $_SESSION['name'] ?? "Guest";
+$gender = $_COOKIE['gender'] ?? 'Unknown';
 ?>
 
 
@@ -51,6 +53,7 @@ $name = $_SESSION['name'];
             <a href="#" class="brand-logo brand-text">Ninja Pizza</a>
             <ul class="right hide-on-small-and-down" id="nax-mobile">
                 <li class="grey-text"><?php echo $name; ?></li>
+                <li class="grey-text"><?php echo $gender; ?></li>
                 <li><a href="../add.php" class="btn brand z-depth-0">Add A PIZZA</a></li>
             </ul>
         </div>
